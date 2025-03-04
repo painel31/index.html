@@ -97,13 +97,6 @@ a:visited {
     color: #000000; /* Define a cor como preto */
   }
 
-  /* Evita que o link fique azul */
-.btn-conta:link,
-.btn-conta:visited,
-.btn-conta:active {
-    color: black;
-}
-
 /* ================== BANNER ================== */
 .banner {
     width: 100vw;  /* Garante que o banner não ultrapasse a largura da tela */
