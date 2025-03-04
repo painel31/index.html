@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Áudios</title>
+
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .audio-player {
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-home {
+            display: inline-block;
+            margin-bottom: 10px;
+            background-color: #28a745;
+        }
+
+        .btn-home:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <h2>Galeria de Áudios</h2>
+
+        <!-- Botão para voltar para a Home -->
+        <a href="/index.html"><button class="btn-home">Voltar Para o Painel</button></a>
+
+        <!-- Áudio 1 -->
+        <div class="audio-player">
+            <p>Áudio 1 - SoundCloud</p>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/ID_DO_AUDIO&color=%23007bff">
+            </iframe>
+        </div>
+
+        <!-- Áudio 2 -->
+        <div class="audio-player">
+            <p>Áudio 2 - SoundCloud</p>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/ID_DO_AUDIO&color=%23007bff">
+            </iframe>
+        </div>
+
+        <!-- Áudio 3 -->
+        <div class="audio-player">
+            <p>Áudio 3 - SoundCloud</p>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/ID_DO_AUDIO&color=%23007bff">
+            </iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>

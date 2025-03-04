@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script defer src="js/script.js"></script>
+    <style>
+        #et {
+            position: fixed; /* Mantém o ET sempre visível */
+            width: 100px;
+            transition: transform 0.2s, opacity 0.3s;
+            z-index: 9999; /* Garante que fique sobre outros elementos */
+            pointer-events: none; /* Impede que o ET bloqueie cliques em elementos abaixo */
+        }
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .toggle-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #228B22;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .toggle-btn:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <img id="et" src="images/nave.png" alt="ET">
+
+    <script>
+        let et = document.getElementById("et");
+        let etAtivo = true;
+
+        document.addEventListener("mousemove", function(event) {
+            if (etAtivo) {
+                et.style.left = event.clientX + "px";
+                et.style.top = event.clientY + "px";
+            }
+        });
+
+        function toggleET() {
+            etAtivo = !etAtivo;
+            et.classList.toggle("hidden", !etAtivo);
+            document.getElementById("toggle-et").textContent = etAtivo ? "Desativar o 31" : "Ativar o 31";
+        }
+    </script>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="menu">
+            <a href="index.html" class="logo">Painel <span class="logo-num">31</span></a>
+            <ul class="menu-links">
+                <li><a href="pages/audio.html">Áudio</a></li>
+                <li><a href="pages/video.html">Vídeo</a></li>
+                <li><a href="pages/imagem.html">Imagem</a></li>
+                <li><a href="pages/saibamais.html">Saiba Mais</a></li>
+                <li><a href="pages/faleconosco.html">Fale Conosco</a></li>
+            </ul>
+            <a href="pages/login.html" class="btn-conta">Minha Conta</a>
+        </nav>
+    </header>
+    
+    <!-- Banner Rotativo -->
+    <section class="banner">
+        <div class="slides">
+            <div class="slide" style="background-image: url('/images/banner1.jpg');"></div>
+            <div class="slide" style="background-image: url('/images/banner2.jpg');"></div>
+            <div class="slide" style="background-image: url('/images/banner3.jpg');"></div>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer>
+        <p>Desenvolvido por 5 Amigos</p>
+        <p>Todos os Direitos Reservados</p>
+        <p>&copy; Copyright 2025</p>
+        <button id="toggle-et" class="toggle-btn" onclick="toggleET()">Desativar o 31</button>
+    </footer>
+</body>
+</html>

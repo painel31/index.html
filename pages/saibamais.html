@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiba Mais</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script defer src="../js/script.js"></script>
+    <style>
+        #et {
+            position: fixed;
+            width: 100px;
+            transition: transform 0.2s, opacity 0.3s;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .toggle-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #228B22;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .toggle-btn:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <img id="et" src="../images/nave.png" alt="ET">
+
+    <script>
+        let et = document.getElementById("et");
+        let etAtivo = true;
+
+        document.addEventListener("mousemove", function(event) {
+            if (etAtivo) {
+                et.style.left = event.clientX + "px";
+                et.style.top = event.clientY + "px";
+            }
+        });
+
+        function toggleET() {
+            etAtivo = !etAtivo;
+            et.classList.toggle("hidden", !etAtivo);
+            document.getElementById("toggle-et").textContent = etAtivo ? "Desativar o 31" : "Ativar o 31";
+        }
+    </script>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="menu">
+            <a href="../index.html" class="logo">Painel <span class="logo-num">31</span></a>
+            <ul class="menu-links">
+                <li><a href="audio.html">Áudio</a></li>
+                <li><a href="video.html">Vídeo</a></li>
+                <li><a href="imagem.html">Imagem</a></li>
+                <li><a href="saibamais.html">Saiba Mais</a></li>
+                <li><a href="faleconosco.html">Fale Conosco</a></li>
+            </ul>
+            <a href="../pages/login.html" class="btn-conta">Minha Conta</a>
+        </nav>
+    </header>
+    
+    <!-- Conteúdo da Página -->
+    <main class="container">
+        <div class="content">
+            <h1>=)</h1>
+            <p>O Painel 31 é uma plataforma multimídia inovadora, projetada para acesso rápido a áudios, vídeos e imagens. Com interface intuitiva e responsiva, oferece navegação otimizada. A plataforma conta com vasta biblioteca de conteúdos e atualizações frequentes. O design focado na usabilidade garante uma experiência agradável e prática. O objetivo é facilitar a exploração de mídia de forma eficiente. O Painel 31 se destaca pela rapidez, praticidade e ambiente amigável.</p>
+        </div>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <p>Desenvolvido Por 5 Amigos</p>
+            <p>Todos os Direitos Reservados</p>
+            <p>&copy; Copyright 2025</p>
+            <button id="toggle-et" class="toggle-btn" onclick="toggleET()">Desativar o 31</button>
+        </div>
+    </footer>
+</body>
+</html>
