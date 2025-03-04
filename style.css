@@ -1,0 +1,134 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* Garante que o body e o HTML não ultrapassem a largura da tela */
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+}
+
+/* Centraliza todos os textos do body */
+body {
+    text-align: center;
+}
+
+/* Espaçamento entre títulos e parágrafos */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ================== HEADER ================== */
+header {
+    background: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.logo-num {
+    background: green;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.menu-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu-links li a:hover {
+    color: green;
+}
+
+/* Botão Minha Conta */
+.btn-conta {
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-conta:hover {
+    background: black;
+    color: white;
+}
+
+a:visited {
+    color: #000000; /* Define a cor como preto */
+  }
+
+  /* Evita que o link fique azul */
+.btn-conta:link,
+.btn-conta:visited,
+.btn-conta:active {
+    color: black;
+}
+
+/* ================== BANNER ================== */
+.banner {
+    width: 100vw;  /* Garante que o banner não ultrapasse a largura da tela */
+    height: 50vh;  /* Define uma altura adequada */
+    overflow: hidden; /* Evita que conteúdos ultrapassem os limites */
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    flex: 0 0 100%;
+    background-size: cover; /* Faz a imagem preencher corretamente */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ================== RODAPÉ ================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background: white;
+    border-top: 2px solid black;
+}
