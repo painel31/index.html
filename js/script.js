@@ -1,19 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Carrega o cabeçalho
-    fetch('../components/header.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erro ao carregar o cabeçalho');
-            }
-            return response.text();
-        })
-        .then(data => {
-            // Insere o cabeçalho no div com id "header"
-            document.getElementById('header').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Erro ao carregar o cabeçalho:', error);
-        });
 
     // Configuração do slideshow
     let slideIndex = 0;
