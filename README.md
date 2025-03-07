@@ -57,16 +57,9 @@ Este arquivo de documentação que explica a estrutura e os detalhes do projeto.
    ```bash
    git clone https://github.com/painel31/index.html.git
 
-2. Acesse o diretório do projeto:
+1. Clone este repositório:
    ```bash
-cd painel31
+   cd painel31
 
 3. Abra o arquivo index.html em seu navegador de preferência.
-
-----------------------
-Tecnologias Utilizadas
-HTML5: Estruturação do conteúdo da página.
-CSS3: Estilização das páginas e design responsivo.
-JavaScript: Lógica interativa e dinâmicas no site.
-Media Files: Áudio (.mp3) e imagens (.jpg, .png) para personalizar o conteúdo visual e sonoro.
 
