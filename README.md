@@ -57,9 +57,11 @@ Este arquivo de documentação que explica a estrutura e os detalhes do projeto.
    ```bash
    git clone https://github.com/painel31/index.html.git
 
-1. Clone este repositório:
+1. Acesse o diretório do projeto:
    ```bash
    cd index.html
 
-3. Abra o arquivo index.html em seu navegador de preferência.
+3. Abra a pasta "index.html" 
+
+4. Depois abra o arquivo "index.html" no seu navegador de preferência
 
