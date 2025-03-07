@@ -4,28 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de Imagens</title>
-    
-    <!-- Caminho corrigido para os arquivos CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-
-    <!-- Caminho corrigido para o JavaScript -->
-    <script defer src="/js/script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .gallery-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .image-selector {
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+        .image-display {
+            margin-top: 20px;
+            position: relative;
+        }
+        .image-display img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .image-display img:hover {
+            transform: scale(1.05);
+        }
+        .home-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .home-btn:hover {
+            background: #1e7e34;
+        }
+    </style>
 </head>
 <body>
-    <!-- Galeria de Imagens -->
-    <section class="galeria">
-        <h1>Galeria de Fotos</h1>
-        <a href="/index.html"><button class="btn-home">Voltar Para o Painel</button></a>
-
-        <div class="grid-galeria">
-            <img src="../images/foto1.jpg" alt="Imagem 1">
-            <img src="../images/foto2.jpg" alt="Imagem 2">
-            <img src="../images/foto3.jpg" alt="Imagem 3">
-            <img src="../images/foto4.jpg" alt="Imagem 4">
-            <img src="../images/foto5.jpg" alt="Imagem 5">
-            <img src="../images/foto6.jpg" alt="Imagem 6">
+    <div class="gallery-container">
+        <h2>Galeria de Imagem</h2>
+        <div class="image-selector">
+            <select id="image-selector">
+                <option value="../images/foto0.jpg">Escolha uma imagem</option>
+                <option value="../images/foto1.jpg">1</option>
+                <option value="../images/foto2.jpg">2</option>
+                <option value="../images/foto3.jpg">3</option>
+                <option value="../images/foto4.jpg">4</option>
+                <option value="../images/foto5.jpg">5</option>
+                <option value="../images/foto5.jpg">6</option>
+            </select>
         </div>
-    </section>
+        <div class="image-display">
+            <img id="displayed-image" src="../images/image0.jpg" alt="Imagem selecionada">
+        </div>
+    </div>
+    <button class="home-btn" onclick="window.location.href='../index.html'">Voltar Para O Painel</button>
+
+    <script>
+        document.getElementById("image-selector").addEventListener("change", function() {
+            let imageDisplay = document.getElementById("displayed-image");
+            imageDisplay.src = this.value;
+        });
+    </script>
 </body>
 </html>
