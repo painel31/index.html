@@ -59,7 +59,7 @@ Este arquivo de documentação que explica a estrutura e os detalhes do projeto.
 
 1. Clone este repositório:
    ```bash
-   cd painel31
+   cd index.html
 
 3. Abra o arquivo index.html em seu navegador de preferência.
 
