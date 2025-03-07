@@ -70,25 +70,34 @@
         <h2>Galeria de Imagem</h2>
         <div class="image-selector">
             <select id="image-selector">
-                <option value="../images/foto0.jpg">Escolha Aqui</option>
+                <option value="../images/foto0.jpg" selected>Escolha Aqui</option>
                 <option value="../images/foto1.jpg">1</option>
                 <option value="../images/foto2.jpg">2</option>
                 <option value="../images/foto3.jpg">3</option>
                 <option value="../images/foto4.jpg">4</option>
                 <option value="../images/foto5.jpg">5</option>
-                <option value="../images/foto5.jpg">6</option>
+                <option value="../images/foto6.jpg">6</option>
             </select>
         </div>
         <div class="image-display">
-            <img id="displayed-image" src="../images/image0.jpg" alt="Imagem selecionada">
+            <img id="displayed-image" src="" alt="Imagem selecionada">
         </div>
     </div>
     <button class="home-btn" onclick="window.location.href='../index.html'">Voltar Para O Painel</button>
 
     <script>
-        document.getElementById("image-selector").addEventListener("change", function() {
+        document.addEventListener("DOMContentLoaded", function() {
             let imageDisplay = document.getElementById("displayed-image");
-            imageDisplay.src = this.value;
+            let imageSelector = document.getElementById("image-selector");
+
+            // Define a imagem inicial como foto0.jpg
+            let initialImage = "../images/foto0.jpg";
+            imageDisplay.src = initialImage;
+
+            // Atualiza a imagem ao trocar a seleção
+            imageSelector.addEventListener("change", function() {
+                imageDisplay.src = this.value;
+            });
         });
     </script>
 </body>
